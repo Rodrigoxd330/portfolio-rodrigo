@@ -1,16 +1,24 @@
 ---
 import '../styles/global.css'
+import { NotificacionesToast } from '../Components/BotonCopiar.jsx';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body class="p-28 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl">
-		<slot />
-	</body>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Rodrigo Chang - Portafolio</title>
+    </head>
+    
+    <body class="bg-google-gray min-h-screen m-0 selection:bg-google-blue selection:text-white">
+        <NotificacionesToast client:load />
+        
+        <div class="max-w-7xl mx-auto md:p-10 p-4"> 
+            <div class="bg-white/50 backdrop-blur-md border border-white/20 rounded-3xl p-8 md:p-12 shadow-sm">
+                 <slot />
+            </div>
+        </div>
+    </body>
 </html>

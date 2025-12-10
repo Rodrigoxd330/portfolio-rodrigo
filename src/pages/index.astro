@@ -1,11 +1,11 @@
 ---
 import Layout from "../Layouts/Layout.astro";
-import { BotonCopiar, NotificacionesToast } from '../Components/BotonCopiar.jsx';
+import { BotonCopiar } from '../Components/BotonCopiar.jsx';
 import { GaleriaProyectos } from '../Components/GaleriaProyectos.jsx';
 import proyectosData from '../Data/proyectos.json'; // Astro permite importar JSON directo
 import type { Proyecto } from '../Types/Proyecto';
-const proyectos: Proyecto[] = proyectosData;
 
+const proyectos: Proyecto[] = proyectosData;
 const email = "rodrigo.bchr@gmail.com"
 const cvLink = "https://drive.google.com/file/d/1m0UPnHm4FK5a-8QYmrKOE9IX5jvNlqKj/view";
 const linkedinLink = "https://www.linkedin.com/in/rodrigo-chang-168330319/";
@@ -14,10 +14,10 @@ const githubLink = "https://github.com/Rodrigoxd330";
 const btnClasses = "group flex items-center gap-3 px-4 py-2 bg-google-gray rounded-full hover:bg-white hover:shadow-card transition-all cursor-pointer border border-transparent hover:border-gray-100 copy-btn";
 ---
 
-<Layout>
-    <NotificacionesToast client:load />
+<Layout>	
 
-    <main class="flex flex-row justify-center gap-48 items-center">
+    <main class="flex flex-row justify-center gap-28 items-center">
+
         <div>
             <img src="/foto-rodrigo.jpg" alt="Foto de Rodrigo" class="w-96 h-96 rounded-full shrink-0 object-cover shadow-2xl" />
         </div>  
@@ -38,8 +38,13 @@ const btnClasses = "group flex items-center gap-3 px-4 py-2 bg-google-gray round
                 </div>
             </header>
 
-            <article class="max-w-3xl text-center md:text-left">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend ex eget tempor interdum. Praesent congue cursus lorem vitae tristique. Vivamus metus sapien, mollis sit amet lorem fringilla, iaculis fermentum nulla. Vestibulum convallis nisl vel pellentesque lobortis. Cras sollicitudin sit amet eros non ullamcorper. Fusce tincidunt mauris sit amet pharetra varius. Nunc hendrerit dolor non hendrerit egestas. Morbi velit purus, rhoncus sed hendrerit vitae, consequat id lectus. Etiam vehicula purus ex, in posuere sapien blandit at. Vestibulum vitae velit pharetra, convallis dui in, tempus enim. Nunc fringilla facilisis ullamcorper. Nam at quam quis diam gravida sollicitudin. Ut at turpis feugiat, tristique turpis non, aliquet nulla. Donec consequat nec neque at euismod. Cras non elit quis erat imperdiet bibendum. Duis in ultricies diam.</p>  
+            <article class="max-w-xl text-center md:text-left">
+                <p>Estudiante de octavo ciclo de Ingeniería Informática en la PUCP con gran interés en la programación.
+Destaco por mis habilidades en desarrollo web y manejo de bases de datos, aplicadas en proyectos
+académicos y personales donde diseñé y consumí APIs RESTful con React y Spring. Además, tengo
+experiencia en análisis de datos con Python y Power BI, lo que me permite abordar tanto el desarrollo
+de aplicaciones como la toma de decisiones basada en datos. Busco oportunidades de prácticas para
+seguir aprendiendo y aportar valor a proyectos tecnológicos.</p>  
             </article>
             
             <div class="mt-6 flex flex-col md:flex-row items-center gap-6">
@@ -72,11 +77,9 @@ const btnClasses = "group flex items-center gap-3 px-4 py-2 bg-google-gray round
                     </a>
                 </div>
             </div>
-
-        </section>      
-    </main>
+        </section>       
+	</main>
 	<section>
-		<GaleriaProyectos client:visible listaProyectos={proyectos}/>
+		<GaleriaProyectos client:visible listaProyectos={proyectos}></GaleriaProyectos>
 	</section>
-
 </Layout>
