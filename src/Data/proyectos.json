@@ -1,0 +1,19 @@
+  
+[{
+    "id": "1",
+    "titulo": "Predicción de Dengue con ML",
+    "descripcionCorta": "Modelo de Machine Learning para predecir brotes en Loreto.",
+    "descripcionLarga": "Un sistema completo que utiliza datos históricos de clima y casos positivos para predecir brotes futuros de Dengue en la región de Loreto, Perú. Utiliza algoritmos de regresión y series de tiempo con Python y Scikit-Learn.",
+    "tags": ["Python", "Machine Learning", "Data Science"],
+    "imagen": "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800&auto=format&fit=crop",
+    "link": "#"
+  },
+  {
+    "id": "2",
+    "titulo": "GIA - Grupo de Cohetería Espacial ",
+    "descripcionCorta": "Página web para mostrar noticias e información de GIA.",
+    "descripcionLarga": "Despliegue automatizado de un servidor de Minecraft versión 1.20.1 Forge con mods. Alojado en una máquina virtual de Azure, configurado con scripts de inicio automático y backups programados.",
+    "tags": ["TypeScript", "NextJS", "CMS headless"],
+    "imagen": "https://images.unsplash.com/photo-1607988795691-3d0147b43231?q=80&w=800&auto=format&fit=crop",
+    "link": "https://giapucp.vercel.app/"
+}]
