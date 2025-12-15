@@ -58,7 +58,7 @@ export const GaleriaProyectos = ({ listaProyectos }) => {
             className="bg-white rounded-2xl max-w-2xl w-full shadow-2xl overflow-hidden relative flex flex-col max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative h-64 shrink-0">
+            <div className="relative h-48 md:h-64 shrink-0"> {/* CAMBIO: h-48 en móvil, h-64 en desktop */}
               <img src={`/proyectos/${proyectoSeleccionado.imagen}`} alt={proyectoSeleccionado.titulo} className="w-full h-full object-cover"/>
               <button 
                 onClick={() => setProyectoSeleccionado(null)}
