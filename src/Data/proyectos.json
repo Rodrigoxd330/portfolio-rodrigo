@@ -32,7 +32,7 @@
     "descripcionCorta": "Página web para préstamos de libros en Universidades",
     "descripcionLarga": "Adaptación de un proyecto de la universidad de una página web para el préstamo de publicaciones en universidades del consorcio. En los cambios se migró de ASP.NET a React para la interfaz y de Java puro a SpringBoot para el backend. Las imágenes fueron pasadas a un Bucket (Cloudinary) ya que estaban guardadas en formato BLOB.",
     "tags": ["SpringBoot", "React", "MySQL"],
-    "imagen": "",
+    "imagen": "prestasoft.png",
     "link": ""
   }
 ]
