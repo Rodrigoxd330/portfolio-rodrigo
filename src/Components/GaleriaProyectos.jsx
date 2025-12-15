@@ -4,19 +4,18 @@ import { createPortal } from 'react-dom';
 export const GaleriaProyectos = ({ listaProyectos }) => {
   const [proyectoSeleccionado, setProyectoSeleccionado] = useState(null);
   const [mounted, setMounted] = useState(false);
-
-  // 1. Hidratación segura para Astro
+  
   useEffect(() => {
     setMounted(true);
     return () => setMounted(false);
   }, []);
 
-  // 2. Bloquear el scroll del fondo cuando el modal está abierto
+  
   useEffect(() => {
     if (proyectoSeleccionado) {
-      document.body.style.overflow = 'hidden'; // Congela el fondo
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'unset'; // Libera el fondo
+      document.body.style.overflow = 'unset';
     }
     return () => { document.body.style.overflow = 'unset'; };
   }, [proyectoSeleccionado]);
@@ -36,7 +35,7 @@ export const GaleriaProyectos = ({ listaProyectos }) => {
             className="group relative bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden border border-gray-100 hover:-translate-y-1"
           >
             <div className="h-48 overflow-hidden">
-              <img src={proyecto.imagen} alt={proyecto.titulo} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+              <img src={`/proyectos/${proyecto.imagen}`} alt={proyecto.titulo} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold text-gray-800 mb-2">{proyecto.titulo}</h3>
@@ -50,28 +49,17 @@ export const GaleriaProyectos = ({ listaProyectos }) => {
           </div>
         ))}
       </div>
-
-      {/* 3. EL PORTAL MÁGICO 
-         Esto "teletransporta" el modal fuera de tu Layout con blur.
-         Así ocupa toda la pantalla real y no se corta.
-      */}
       {mounted && proyectoSeleccionado && createPortal(
         <div 
-          className="fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity animate-fade-in"
+          className="fixed inset-0 z-10 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity animate-fade-in"
           onClick={() => setProyectoSeleccionado(null)}
         >
-          {/* CONTENEDOR DEL MODAL
-             max-h-[90vh]: Altura máxima del 90% de la pantalla
-             overflow-y-auto: Si el contenido es muy largo, scrollea AQUÍ dentro.
-          */}
           <div 
             className="bg-white rounded-2xl max-w-2xl w-full shadow-2xl overflow-hidden relative flex flex-col max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}
           >
-            
-            {/* Cabecera con Imagen (Fija al hacer scroll interno si quisieras, pero aquí scrollea con todo) */}
             <div className="relative h-64 shrink-0">
-              <img src={proyectoSeleccionado.imagen} alt={proyectoSeleccionado.titulo} className="w-full h-full object-cover"/>
+              <img src={`/proyectos/${proyectoSeleccionado.imagen}`} alt={proyectoSeleccionado.titulo} className="w-full h-full object-cover"/>
               <button 
                 onClick={() => setProyectoSeleccionado(null)}
                 className="absolute top-4 right-4 p-2 bg-black/50 text-white rounded-full hover:bg-black/80 transition-colors backdrop-blur-md"
@@ -79,8 +67,6 @@ export const GaleriaProyectos = ({ listaProyectos }) => {
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
               </button>
             </div>
-
-            {/* Contenido Scrolleable (overflow-y-auto aquí si quieres header fijo, o en el padre) */}
             <div className="p-8 overflow-y-auto">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">{proyectoSeleccionado.titulo}</h3>
               
@@ -108,7 +94,7 @@ export const GaleriaProyectos = ({ listaProyectos }) => {
             </div>
           </div>
         </div>,
-        document.body // <-- Destino del Portal
+        document.body
       )}
     </section>
   );

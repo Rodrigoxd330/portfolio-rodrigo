@@ -2,18 +2,37 @@
 [{
     "id": "1",
     "titulo": "Predicción de Dengue con ML",
-    "descripcionCorta": "Modelo de Machine Learning para predecir brotes en Loreto.",
-    "descripcionLarga": "Un sistema completo que utiliza datos históricos de clima y casos positivos para predecir brotes futuros de Dengue en la región de Loreto, Perú. Utiliza algoritmos de regresión y series de tiempo con Python y Scikit-Learn.",
-    "tags": ["Python", "Machine Learning", "Data Science"],
-    "imagen": "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800&auto=format&fit=crop",
+    "descripcionCorta": "Modelo de Machine Learning para predecir brotes de dengue en Loreto.",
+    "descripcionLarga": "Desarrollo de un modelo de Machine Learning para la proyección semanal de casos de dengue en Loreto integré datos históricos y variables meteorológicas para optimizar la precisión y sensibilidad. Random Forest destacó como el algoritmo con mejores resultados.",
+    "tags": ["Python", "Machine Learning"],
+    "imagen": "dengue.jpg",
     "link": "#"
   },
   {
     "id": "2",
     "titulo": "GIA - Grupo de Cohetería Espacial ",
     "descripcionCorta": "Página web para mostrar noticias e información de GIA.",
-    "descripcionLarga": "Despliegue automatizado de un servidor de Minecraft versión 1.20.1 Forge con mods. Alojado en una máquina virtual de Azure, configurado con scripts de inicio automático y backups programados.",
+    "descripcionLarga": "Página web en la que se muestran todas las noticias acerca de lanzamientos de cohetes o eventos que se realice la organización. Se usó NextJS con TypeScript para la interfaz y Contentful como un Headless CMS para manejar el contenido mostrado en la página.",
     "tags": ["TypeScript", "NextJS", "CMS headless"],
-    "imagen": "https://images.unsplash.com/photo-1607988795691-3d0147b43231?q=80&w=800&auto=format&fit=crop",
+    "imagen": "gia.png",
     "link": "https://giapucp.vercel.app/"
-}]
+ },
+ {
+  "id":"3",
+  "titulo": "TuTicket",
+  "descripcionCorta": "Página web de venta de tickets para eventos",
+  "descripcionLarga": "Página web para la compra de tickets para eventos para usuarios, creación de eventos para organizadores y funciones administrativas de la página. Se usó React par la interfaz y SpringBoot para el backend.",
+  "tags": ["SpringBoot", "React", "AWS", "PostgreSQL"],
+  "imagen": "",
+  "link": ""
+  },
+  {
+    "id":"3",
+    "titulo": "Prestasoft",
+    "descripcionCorta": "Página web para préstamos de libros en Universidades",
+    "descripcionLarga": "Adaptación de un proyecto de la universidad de una página web para el préstamo de publicaciones en universidades del consorcio. En los cambios se migró de ASP.NET a React para la interfaz y de Java puro a SpringBoot para el backend. Las imágenes fueron pasadas a un Bucket (Cloudinary) ya que estaban guardadas en formato BLOB.",
+    "tags": ["SpringBoot", "React", "MySQL"],
+    "imagen": "",
+    "link": ""
+  }
+]
