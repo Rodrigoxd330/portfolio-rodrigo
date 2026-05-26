@@ -90,12 +90,7 @@ export const GaleriaProyectos = ({ listaProyectos }) => {
               </div>
                             
               <div className="text-gray-600 leading-relaxed mb-8 space-y-4">
-                <div>              
-                  <strong className="text-gray-900">El Problema:</strong>
-                  <p className="mt-1">{proyectoSeleccionado.problema}</p>
-                </div>
-                <div>
-                  <strong className="text-gray-900">La Solución:</strong>
+                <div>                  
                   <p className="mt-1">{proyectoSeleccionado.solucion}</p>
                 </div>
               </div>
