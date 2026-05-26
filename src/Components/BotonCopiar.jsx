@@ -1,4 +1,3 @@
-import React from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 
 export const BotonCopiar = ({ textoACopiar, children, className, title }) => {
@@ -11,7 +10,6 @@ export const BotonCopiar = ({ textoACopiar, children, className, title }) => {
   };
 
   return (
-    // Ahora el botón usa la clase y el contenido que le mandes desde fuera
     <button 
       onClick={copiarTexto} 
       className={className} 

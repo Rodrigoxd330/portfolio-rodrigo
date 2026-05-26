@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -8,9 +9,10 @@
   --color-text-primary: #202124;
   --color-text-body: #5F6368;
 
-  /* Fuentes (asegúrate de importarlas en el HTML) */
-  --font-sans: "Roboto", "Open Sans", sans-serif;
-  --font-heading: "Poppins", "Product Sans", sans-serif;
+  /* Fuentes */
+  --font-heading: "Poppins", sans-serif;
+  --font-subheading: "Montserrat", sans-serif;
+  --font-text: "Inter", sans-serif;
 
   /* Sombras personalizadas */
   --shadow-card: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
